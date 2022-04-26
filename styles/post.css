@@ -37,16 +37,16 @@
     justify-content: space-between;
 }
 
-.post__footer__reactions {
+.reactions {
     display: flex;
     font-size: 1rem;
     font-weight: 500;
 }
-.post__footer__reactions > div {
+.reactions__container {
     display: flex;
     align-items: center;
 }
-.post__footer__reactions button {
+.reactions__button {
     border-radius: 50%;
     border: none;
     padding: 0.5rem;
@@ -56,38 +56,38 @@
     cursor: pointer;
     margin-left: 0.2rem;
     transition: .2s ease-out background-color;
+    color: #fff;
 }
-.post__footer__reactions .material-symbols-outlined {
+.reactions__container .material-symbols-outlined {
     font-size: 1.3rem;
 }
 
-.post__footer__reactions__positive {
+.reactions__container_positive {
     margin-right: 0.7rem;
 }
-.post__footer__reactions__positive > span {
+.reactions__container_positive > .reactions__counter {
     color: #08b708;
 }
-.post__footer__reactions__positive > button {
+.reactions__container_positive > .reactions__button {
     background-color: rgba(8, 183, 8, 0.37);
-    color: #fff;
 }
-.post__footer__reactions__positive > button:hover {
+.reactions__container_positive > .reactions__button:hover {
     background-color: rgba(8, 183, 8, 0.60);
 }
 
-.post__footer__reactions__negative > span {
+.reactions__container_negative > .reactions__counter {
     color: #b70808;
 }
-.post__footer__reactions__negative > button {
+.reactions__container_negative > .reactions__button {
     background-color: rgba(183, 8, 8, 0.37);
     color: #fff;
 }
-.post__footer__reactions__negative > button:hover {
+.reactions__container_negative > .reactions__button:hover {
     background-color: rgba(183, 8, 8, 0.60);
 }
 
 
-.post__footer__open__button {
+.post__open-button {
     padding: 0.6rem 1.8rem;
     font-size: 1rem;
     border-radius: 5px;
@@ -97,6 +97,6 @@
     color: #fff;
     transition: .2s ease-out background-color;
 }
-.post__footer__open__button:hover {
+.post__open-button:hover {
     background-color: rgba(150, 179, 255, 0.60);
 }
