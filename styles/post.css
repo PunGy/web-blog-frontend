@@ -1,0 +1,102 @@
+.posts-list {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.posts-list > .post {
+    margin-bottom: 20px;
+}
+.posts-list > .post:last-child {
+    margin-bottom: 0;
+}
+
+.post {
+    width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #34393b;
+}
+
+.post__header {
+    font-size: 2em;
+    color: #e1dfdf;
+}
+
+.post__content {
+    font-size: 1.1em;
+    color: #e1dfdf;
+    padding: 0 0.5em;
+    margin: 1em 0;
+    line-height: 1.4em;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.post__footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post__footer__reactions {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.post__footer__reactions > div {
+    display: flex;
+    align-items: center;
+}
+.post__footer__reactions button {
+    border-radius: 50%;
+    border: none;
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 0.2rem;
+    transition: .2s ease-out background-color;
+}
+.post__footer__reactions .material-symbols-outlined {
+    font-size: 1.3rem;
+}
+
+.post__footer__reactions__positive {
+    margin-right: 0.7rem;
+}
+.post__footer__reactions__positive > span {
+    color: #08b708;
+}
+.post__footer__reactions__positive > button {
+    background-color: rgba(8, 183, 8, 0.37);
+    color: #fff;
+}
+.post__footer__reactions__positive > button:hover {
+    background-color: rgba(8, 183, 8, 0.60);
+}
+
+.post__footer__reactions__negative > span {
+    color: #b70808;
+}
+.post__footer__reactions__negative > button {
+    background-color: rgba(183, 8, 8, 0.37);
+    color: #fff;
+}
+.post__footer__reactions__negative > button:hover {
+    background-color: rgba(183, 8, 8, 0.60);
+}
+
+
+.post__footer__open__button {
+    padding: 0.6rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: rgba(150, 179, 255, 0.37);
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    transition: .2s ease-out background-color;
+}
+.post__footer__open__button:hover {
+    background-color: rgba(150, 179, 255, 0.60);
+}
