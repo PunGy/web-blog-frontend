@@ -1,0 +1,44 @@
+.button {
+    padding: 0.6rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: rgba(150, 179, 255, 0.37);
+    cursor: pointer;
+    border: none;
+    color: var(--font-color);
+    transition: .2s ease-out background-color;
+}
+
+.button:hover {
+    background-color: rgba(150, 179, 255, 0.60);
+}
+
+.input {
+    width: 100%;
+}
+.input__label {
+    display: block;
+    color: var(--font-color);
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+.input__field {
+    display: block;
+    background-color: var(--bg-color-2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 5px;
+    color: var(--font-color);
+    font-size: 1rem;
+    outline: none;
+}
+
+.link {
+    text-decoration: none;
+    color: #4d8bdc;
+}
+
+.link:hover {
+    color: #68a1ec;
+}

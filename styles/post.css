@@ -14,17 +14,17 @@
     width: 100%;
     padding: 1em;
     border-radius: 5px;
-    background-color: #34393b;
+    background-color: var(--bg-color-1);
 }
 
 .post__header {
     font-size: 2em;
-    color: #e1dfdf;
+    color: var(--font-color);
 }
 
 .post__content {
     font-size: 1.1em;
-    color: #e1dfdf;
+    color: var(--font-color);
     padding: 0 0.5em;
     margin: 1em 0;
     line-height: 1.4em;
@@ -56,7 +56,7 @@
     cursor: pointer;
     margin-left: 0.2rem;
     transition: .2s ease-out background-color;
-    color: #fff;
+    color: var(--font-color);
 }
 .reactions__container .material-symbols-outlined {
     font-size: 1.3rem;
@@ -66,7 +66,7 @@
     margin-right: 0.7rem;
 }
 .reactions__container_positive > .reactions__counter {
-    color: #08b708;
+    color: var(--green);
 }
 .reactions__container_positive > .reactions__button {
     background-color: rgba(8, 183, 8, 0.37);
@@ -76,27 +76,12 @@
 }
 
 .reactions__container_negative > .reactions__counter {
-    color: #b70808;
+    color: var(--red);
 }
 .reactions__container_negative > .reactions__button {
     background-color: rgba(183, 8, 8, 0.37);
-    color: #fff;
+    color: var(--font-color);
 }
 .reactions__container_negative > .reactions__button:hover {
     background-color: rgba(183, 8, 8, 0.60);
-}
-
-
-.post__open-button {
-    padding: 0.6rem 1.8rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    background-color: rgba(150, 179, 255, 0.37);
-    cursor: pointer;
-    border: none;
-    color: #fff;
-    transition: .2s ease-out background-color;
-}
-.post__open-button:hover {
-    background-color: rgba(150, 179, 255, 0.60);
 }
