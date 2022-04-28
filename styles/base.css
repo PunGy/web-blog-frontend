@@ -5,8 +5,19 @@ html, body {
     font-weight: 300;
 }
 
+:root {
+    --bg-color-0: #15191c;
+    --bg-color-1: #34393b;
+    --bg-color-2: #3f4548;
+
+    --green: #08b708;
+    --red: #b70808;
+
+    --font-color: #e1dfdf;
+}
+
 body {
-    background-color: #15191c;
+    background-color: var(--bg-color-0);
 }
 
 .container {
