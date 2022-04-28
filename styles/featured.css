@@ -1,0 +1,48 @@
+
+.featured-list {
+    width: 300px;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #34393b;
+    position: fixed;
+    top: 3rem;
+    left: 5rem;
+}
+
+.featured__header {
+    font-size: 1.5em;
+    color: #e1dfdf;
+}
+
+.featured {
+    color: #e1dfdf;
+    margin: 1em 0 0 0;
+    line-height: 1.5em;
+    max-height: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .2s ease-out background-color;
+    font-weight: 500;
+
+}
+
+.featured:hover {
+    background-color: rgba(69, 84, 122, 0.6);
+}
+
+.featured__reactions {
+    font-size: 0.8em;
+}
+
+.reactions__counter__positive {
+    color: #08b708;
+    margin: 0.3em;
+}
+
+.reactions__counter__negative {
+    color: #b70808;
+}
