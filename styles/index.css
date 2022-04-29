@@ -9,3 +9,8 @@
 #posts-list > blog-post:last-child {
     margin-bottom: 0;
 }
+
+featured-list {
+    top: 2rem;
+    left: 3rem;
+}
