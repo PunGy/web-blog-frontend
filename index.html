@@ -8,19 +8,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
 
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/base.css">
-    <link rel="stylesheet" href="./styles/post.css">
     <link rel="stylesheet" href="./styles/featured.css">
     <link rel="stylesheet" href="./styles/inputs.css">
+    <link rel="stylesheet" href="./styles/index.css">
 
     <title>Blog</title>
 </head>
 <body>
+    <template id="post-template">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./components/blog-post/post.css">
+        <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
 
-    <div class="featured-list">
+        <section>
+            <div id="header-container">
+                <h3 id="header"><slot name="title">Title</slot></h3>
+            </div>
+            <div id="content-container">
+                <p id="content"><slot name="content">Content</slot></p>
+            </div>
+            <div id="footer-container">
+                <div id="reactions-list">
+                    <div class="reaction__container" id="reaction-positive-container">
+                        <span class="reactions__counter" id="reaction-positive-counter">
+                            <slot name="positive-reaction">0</slot>
+                        </span>
+                        <button class="reaction__button" id="reaction-positive-button"><span class="material-symbols-outlined">thumb_up</span></button>
+                    </div>
+                    <div class="reaction__container" id="reaction-negative-container">
+                        <span class="reactions__counter" id="reaction-negative-counter">
+                            <slot name="negative-reaction">0</slot>
+                        </span>
+                        <button class="reaction__button" id="reaction-negative-button"><span class="material-symbols-outlined">thumb_down</span></button>
+                    </div>
+                </div>
+                <div id="open-container">
+                    <slot name="open-link" id="open">open</slot>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <div class="featured-list" >
         <div class="featured-list__header">
             <h3>Featured</h3>
         </div>
@@ -48,31 +80,10 @@
     </div>
 
     <div class="container">
-        <div class="posts-list">
-            <section class="post">
-                <div class="post__header">
-                    <h3>Text</h3>
-                </div>
-                <div class="post__content">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-                <div class="post__footer">
-                    <div class="reactions">
-                        <div class="reactions__container reactions__container_positive">
-                            <span class="reactions__counter">100</span>
-                            <button class="reactions__button"><span class="material-symbols-outlined">thumb_up</span></button>
-                        </div>
-                        <div class="reactions__container reactions__container_negative">
-                            <span class="reactions__counter">50</span>
-                            <button class="reactions__button"><span class="material-symbols-outlined">thumb_down</span></button>
-                        </div>
-                    </div>
-                    <div class="post__open-container">
-                        <button class="button">Open</button>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <div id="posts-list"></div>
     </div>
+
+    <script src="./components/blog-post/blog-post.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

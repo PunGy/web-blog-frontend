@@ -5,6 +5,7 @@
     background-color: rgba(150, 179, 255, 0.37);
     cursor: pointer;
     border: none;
+    text-decoration: none;
     color: var(--font-color);
     transition: .2s ease-out background-color;
 }

@@ -1,28 +1,18 @@
-.posts-list {
-    width: 700px;
-    margin: 0 auto;
-}
-
-.posts-list > .post {
-    margin-bottom: 20px;
-}
-.posts-list > .post:last-child {
-    margin-bottom: 0;
-}
-
-.post {
+:host {
+    display: block;
+    contain: content;
     width: 100%;
     padding: 1em;
     border-radius: 5px;
     background-color: var(--bg-color-1);
 }
 
-.post__header {
+#header-container {
     font-size: 2em;
     color: var(--font-color);
 }
 
-.post__content {
+#content-container {
     font-size: 1.1em;
     color: var(--font-color);
     padding: 0 0.5em;
@@ -32,21 +22,21 @@
     overflow: hidden;
 }
 
-.post__footer {
+#footer-container {
     display: flex;
     justify-content: space-between;
 }
 
-.reactions {
+#reactions-list {
     display: flex;
     font-size: 1rem;
     font-weight: 500;
 }
-.reactions__container {
+.reaction__container {
     display: flex;
     align-items: center;
 }
-.reactions__button {
+.reaction__button {
     border-radius: 50%;
     border: none;
     padding: 0.5rem;
@@ -58,30 +48,30 @@
     transition: .2s ease-out background-color;
     color: var(--font-color);
 }
-.reactions__container .material-symbols-outlined {
+.reaction__container .material-symbols-outlined {
     font-size: 1.3rem;
 }
 
-.reactions__container_positive {
+#reaction-positive-container {
     margin-right: 0.7rem;
 }
-.reactions__container_positive > .reactions__counter {
+#reaction-positive-counter {
     color: var(--green);
 }
-.reactions__container_positive > .reactions__button {
+#reaction-positive-button {
     background-color: rgba(8, 183, 8, 0.37);
 }
-.reactions__container_positive > .reactions__button:hover {
+#reaction-positive-button:hover {
     background-color: rgba(8, 183, 8, 0.60);
 }
 
-.reactions__container_negative > .reactions__counter {
+#reaction-negative-counter {
     color: var(--red);
 }
-.reactions__container_negative > .reactions__button {
+#reaction-negative-button {
     background-color: rgba(183, 8, 8, 0.37);
     color: var(--font-color);
 }
-.reactions__container_negative > .reactions__button:hover {
+#reaction-negative-button:hover {
     background-color: rgba(183, 8, 8, 0.60);
 }

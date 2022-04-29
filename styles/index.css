@@ -1,0 +1,11 @@
+#posts-list {
+    width: 700px;
+    margin: 0 auto;
+}
+
+#posts-list > blog-post {
+    margin-bottom: 20px;
+}
+#posts-list > blog-post:last-child {
+    margin-bottom: 0;
+}
