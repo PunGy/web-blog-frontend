@@ -1,4 +1,4 @@
-class BlogPost extends HTMLElement {
+class BlogPostElement extends HTMLElement {
     constructor() {
         super();
         const template = document.getElementById('post-template')
@@ -12,4 +12,4 @@ class BlogPost extends HTMLElement {
     }
 }
 
-customElements.define('blog-post', BlogPost)
+customElements.define('blog-post', BlogPostElement)

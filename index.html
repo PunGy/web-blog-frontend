@@ -11,7 +11,6 @@
 
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/base.css">
-    <link rel="stylesheet" href="./styles/featured.css">
     <link rel="stylesheet" href="./styles/inputs.css">
     <link rel="stylesheet" href="./styles/index.css">
 
@@ -51,39 +50,41 @@
             </div>
         </section>
     </template>
+    <template id="featured-list-template">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./components/featured/featured-list.css">
 
-    <div class="featured-list" >
-        <div class="featured-list__header">
-            <h3>Featured</h3>
+        <div id="header-container">
+            <h3 id="header">Featured</h3>
         </div>
-        <a href="#" class="featured">
-            <h2>Title</h2>
-            <div class="featured__reactions">
-                <span class="reactions__counter__positive">100</span>
-                <span class="reactions__counter__negative">50</span>
+        <slot id="posts-list"></slot>
+    </template>
+    <template id="featured-post-template">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./components/featured/featured-post.css">
+
+        <a href="" id="link">
+            <h2 id="title"><slot></slot></h2>
+            <div id="reaction-container">
+                <span id="positive">0</span>
+                <span id="negative">0</span>
             </div>
         </a>
-        <a href="#" class="featured">
-            <h2>Title</h2>
-            <div class="featured__reactions">
-                <span class="reactions__counter__positive">100</span>
-                <span class="reactions__counter__negative">50</span>
-            </div>
-        </a>
-        <a href="#" class="featured">
-            <h2>Title</h2>
-            <div class="featured__reactions">
-                <span class="reactions__counter__positive">100</span>
-                <span class="reactions__counter__negative">50</span>
-            </div>
-        </a>
-    </div>
+    </template>
+
+    <featured-list>
+        <featured-post href="/post/3" positive="43" negative="2">Post number 3</featured-post>
+        <featured-post href="/post/1" positive="15" negative="0">Post number 1</featured-post>
+        <featured-post href="/post/6" positive="235" negative="8">Haha, got ya</featured-post>
+    </featured-list>
 
     <div class="container">
         <div id="posts-list"></div>
     </div>
 
     <script src="./components/blog-post/blog-post.js"></script>
+    <script src="./components/featured/featured-list.js"></script>
+    <script src="./components/featured/featured-post.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

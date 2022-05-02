@@ -1,0 +1,18 @@
+:host {
+    display: block;
+    contain: content;
+    width: 300px;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: var(--bg-color-1);
+    position: fixed;
+}
+
+#header {
+    font-size: 1.5em;
+    color: var(--font-color);
+}
+
+::slotted(featured-post) {
+    margin-top: 1rem;
+}
