@@ -1,3 +1,20 @@
+const templateHTML = `
+<link rel="stylesheet" href="./styles/reset.css">
+<link rel="stylesheet" href="./components/featured/featured-post.css">
+
+<a href="" id="link">
+    <h2 id="title"><slot></slot></h2>
+    <div id="reaction-container">
+        <span id="positive">0</span>
+        <span id="negative">0</span>
+    </div>
+</a>
+`
+const template = document.createElement('template')
+template.setAttribute('id', 'featured-post-template')
+template.innerHTML = templateHTML
+document.body.appendChild(template)
+
 class FeaturedPostElement extends HTMLElement {
     constructor() {
         super();
