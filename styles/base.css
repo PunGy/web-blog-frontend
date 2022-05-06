@@ -19,6 +19,7 @@ html, body {
 
 body {
     background-color: var(--bg-color-0);
+    color: var(--font-color-1);
 }
 
 .container {

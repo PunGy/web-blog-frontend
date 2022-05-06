@@ -1,0 +1,28 @@
+#post-form-container {
+    background-color: var(--bg-color-1);
+    border-radius: 5px;
+    padding: 1rem;
+    padding-top: 2rem;
+    width: 800px;
+    margin: 0 auto;
+}
+
+#inputs-container {
+    margin-bottom: 1.5rem;
+    padding: 0 3rem;
+}
+#inputs-container > .input {
+    margin-bottom: 1rem;
+}
+#inputs-container > .input:last-child {
+    margin-bottom: 0;
+}
+
+#submit-container {
+    display: flex;
+    justify-content: center;
+}
+
+#content {
+    resize: vertical;
+}

@@ -1,6 +1,7 @@
 import { getPosts } from "../../api/posts.js";
+import { getTemplateContent, createTemplate } from "../../helpers/component.js";
 
-const templateHTML = `
+createTemplate('post-list-template', `
 <link rel="stylesheet" href="./styles/reset.css">
 
 <style>
@@ -16,23 +17,15 @@ const templateHTML = `
 </style>
 
 <slot id="container"></slot>
-`
-const template = document.createElement('template')
-template.setAttribute('id', 'post-list-template')
-template.innerHTML = templateHTML
-document.body.appendChild(template)
+`)
 
 class PostListElement extends HTMLElement {
     constructor() {
         super();
 
-        const template = document.getElementById('post-list-template')
         const shadow = this.attachShadow({ mode: 'open' })
-        if (template != null) {
-            shadow.appendChild(template.content.cloneNode(true))
-        } else {
-            shadow.innerHTML = '<b style="color: white">Define post-list template!</b>'
-        }
+        const content = getTemplateContent('post-list-template')
+        shadow.appendChild(content)
     }
 
     connectedCallback() {

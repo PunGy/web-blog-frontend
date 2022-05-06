@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/inputs.css">
+    <link rel="stylesheet" href="./styles/create-post.css">
+
+    <title>Create post</title>
+</head>
+<body>
+    <div class="container">
+        <div id="post-form-container">
+            <form action="" id="post-form">
+                <div id="inputs-container">
+                    <div class="input">
+                        <label for="title" class="input__label">Title</label>
+                        <input type="text" id="title" name="title" class="input__field">
+                    </div>
+                    <div class="input">
+                        <label for="content" class="input__label">Content</label>
+                        <textarea rows="15" id="content" name="content" class="input__field"></textarea>
+                    </div>
+                    <button class="button">Attach files</button>
+                </div>
+                <div id="submit-container">
+                    <button class="button">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
