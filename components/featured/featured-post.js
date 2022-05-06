@@ -1,4 +1,7 @@
-const templateHTML = `
+
+import { getTemplateContent, createTemplate } from "../../helpers/component.js";
+
+createTemplate('featured-post-template', `
 <link rel="stylesheet" href="./styles/reset.css">
 <link rel="stylesheet" href="./components/featured/featured-post.css">
 
@@ -9,34 +12,20 @@ const templateHTML = `
         <span id="negative">0</span>
     </div>
 </a>
-`
-const template = document.createElement('template')
-template.setAttribute('id', 'featured-post-template')
-template.innerHTML = templateHTML
-document.body.appendChild(template)
+
+<slot id="featured-list"></slot>
+
+`)
 
 class FeaturedPostElement extends HTMLElement {
     constructor() {
         super();
 
-        const template = document.getElementById('featured-post-template')
         const shadow = this.attachShadow({ mode: 'open' })
-        if (template != null) {
-            const content = template.content.cloneNode(true)
-
-            const positive = this.getAttribute('positive')
-            const negative = this.getAttribute('negative')
-            if (positive != null) content.querySelector('#positive').innerText = positive
-            if (negative != null) content.querySelector('#negative').innerText = negative
-
-            const href = this.getAttribute('href')
-            if (href != null) content.querySelector('#link').setAttribute('href', href)
-
-            shadow.appendChild(content)
-        } else {
-            shadow.innerHTML = '<b style="color: white">Define featured-post template!</b>'
-        }
+        const content = getTemplateContent('featured-post-template')
+        shadow.appendChild(content)
     }
-}
+};
+
 
 customElements.define('featured-post', FeaturedPostElement)

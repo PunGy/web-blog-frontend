@@ -6,9 +6,25 @@ export function getPosts() {
         pages_count: 5,
         data: replicate({
             size: 10,
-            schema:(i) => ({
+            schema: (i) => ({
                 title: text({ capitalized: true, size: num({ min: 1, max: 3 }) }),
                 content: text({ capitalized: true, size: num({ min: 15, max: 130 }) }),
+                positive: num({ min: 5, max: 120 }),
+                negative: num({ min: 0, max: 40 }),
+                id: i,
+            })
+        })
+    })
+}
+
+export function getFeaturedPost() {
+    return Promise.resolve({
+        page: 1,
+        data: replicate({
+            size: 6,
+            schema: (i) => ({
+                title: text({ capitalized: true, size: num({ min: 1, max: 3 }) }),
+                content: text({ capitalized: true, size: num({ min: 0, max: 0 }) }),
                 positive: num({ min: 5, max: 120 }),
                 negative: num({ min: 0, max: 40 }),
                 id: i,

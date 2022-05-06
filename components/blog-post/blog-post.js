@@ -1,4 +1,7 @@
-const templateHTML = `
+
+import { getTemplateContent, createTemplate } from "../../helpers/component.js";
+
+createTemplate('post-template', `
 <link rel="stylesheet" href="./styles/reset.css">
 <link rel="stylesheet" href="./components/blog-post/post.css">
 <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
@@ -30,24 +33,15 @@ const templateHTML = `
         </div>
     </div>
 </section>
-`
-const template = document.createElement('template')
-template.setAttribute('id', 'post-template')
-template.innerHTML = templateHTML
-
-document.body.appendChild(template)
+`)
 
 class BlogPostElement extends HTMLElement {
     constructor() {
         super();
-        const template = document.getElementById('post-template')
 
         const shadow = this.attachShadow({ mode: 'open' })
-        if (template != null) {
-            shadow.appendChild(template.content.cloneNode(true))
-        } else {
-            shadow.innerHTML = '<b style="color: white">Define blog-post template!</b>'
-        }
+        const content = getTemplateContent('post-template')
+        shadow.appendChild(content)
     }
 }
 
