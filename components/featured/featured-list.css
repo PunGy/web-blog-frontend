@@ -13,6 +13,6 @@
     color: var(--font-color);
 }
 
-::slotted(featured-list) {
+::slotted(featured-post) {
     margin-top: 1rem;
 }
