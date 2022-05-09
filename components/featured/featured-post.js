@@ -1,4 +1,7 @@
-const templateHTML = `
+
+import { getTemplateContent, createTemplate } from "../../helpers/component.js";
+
+createTemplate('featured-post-template', `
 <link rel="stylesheet" href="./styles/reset.css">
 <link rel="stylesheet" href="./components/featured/featured-post.css">
 
@@ -9,11 +12,7 @@ const templateHTML = `
         <span id="negative">0</span>
     </div>
 </a>
-`
-const template = document.createElement('template')
-template.setAttribute('id', 'featured-post-template')
-template.innerHTML = templateHTML
-document.body.appendChild(template)
+`)
 
 class FeaturedPostElement extends HTMLElement {
     constructor() {
@@ -38,5 +37,6 @@ class FeaturedPostElement extends HTMLElement {
         }
     }
 }
+
 
 customElements.define('featured-post', FeaturedPostElement)
