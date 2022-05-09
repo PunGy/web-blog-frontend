@@ -24,7 +24,7 @@ export function getFeaturedPost() {
             size: 6,
             schema: (i) => ({
                 title: text({ capitalized: true, size: num({ min: 1, max: 3 }) }),
-                content: text({ capitalized: true, size: num({ min: 0, max: 0 }) }),
+                link: `/post/${i}`,
                 positive: num({ min: 5, max: 120 }),
                 negative: num({ min: 0, max: 40 }),
                 id: i,

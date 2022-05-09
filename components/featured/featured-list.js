@@ -24,15 +24,11 @@ class FeaturedListElement extends HTMLElement {
             .then(({ data: fetchedPosts }) => {
                 if (fetchedPosts.length > 0) {
                     const posts = fetchedPosts.map((post) => {
-                        const FeaturedPostElement = document.createElement('featured-post-list')
-
-                        FeaturedPostElement.innerHTML = ` <a href="" id="link-featured">
-                            <span slot="title">${post.title}</span>
-                            <span slot="content">${post.content}</span>
-                            <span slot="positive-reaction">${post.positive}</span>
-                            <span slot="negative-reaction">${post.negative}</span>
-                        </a>
-                        `
+                        const FeaturedPostElement = document.createElement('featured-post')
+                        FeaturedPostElement.setAttribute('href', post.link)
+                        FeaturedPostElement.setAttribute('positive', post.positive)
+                        FeaturedPostElement.setAttribute('negative', post.negative)
+                        FeaturedPostElement.innerText = post.title
 
                         return FeaturedPostElement
                     })
