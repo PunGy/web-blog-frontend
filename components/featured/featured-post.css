@@ -30,3 +30,10 @@
 #negative {
     color: var(--red);
 }
+
+#title {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
