@@ -33,7 +33,7 @@ class FeaturedPostElement extends HTMLElement {
 
             shadow.appendChild(content)
         } else {
-            shadow.innerHTML = '<b style="color: white">Define featured-post template!</b>'
+            shadow.innerHTML = '<b style="color: white">`Define featured-post template!`</b>'
         }
     }
 }
